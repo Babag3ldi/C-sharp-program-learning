@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'course_screen.dart';
 import 'info_screen.dart';
 import 'test_screen.dart';
+import 'video_screen.dart';
 
 class BaseScreen extends StatefulWidget {
   const BaseScreen({Key? key}) : super(key: key);
@@ -23,9 +24,9 @@ class _BaseScreenState extends State<BaseScreen> {
   static const List<Widget> _widgetOptions = <Widget>[
     EsasyScreen(),
     TestScreen(),
+    VideoScreen(),  
     InfoScreen(),
-    //FeaturedScreen(),
-  ];
+    ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,28 +54,18 @@ class _BaseScreenState extends State<BaseScreen> {
             ),
             BottomNavigationBarItem(
               activeIcon: Icon(Icons.list_alt_rounded, size: kBottomNavigationBarItemSize,),
-              // Image.asset(
-              //   icLearning,
-              //   height: kBottomNavigationBarItemSize,
-              // ),
+              
               icon:  Icon(Icons.list_alt_outlined, size: kBottomNavigationBarItemSize,),
-              // Image.asset(
-              //   icLearningOutlined,
-              //   height: kBottomNavigationBarItemSize,
-              // ),
+              
               label: "Test",
             ),
-            // BottomNavigationBarItem(
-            //   activeIcon: Image.asset(
-            //     icWishlist,
-            //     height: kBottomNavigationBarItemSize,
-            //   ),
-            //   icon: Image.asset(
-            //     icWishlistOutlined,
-            //     height: kBottomNavigationBarItemSize,
-            //   ),
-            //   label: "Wishlist",
-            // ),
+            BottomNavigationBarItem(
+              activeIcon: Icon(Icons.video_collection_outlined, size: kBottomNavigationBarItemSize,),
+              
+              icon:  Icon(Icons.video_collection_outlined, size: kBottomNavigationBarItemSize,),
+              
+              label: "Video",
+            ),
             BottomNavigationBarItem(
               activeIcon: Icon(Icons.info_rounded, size: kBottomNavigationBarItemSize,),
               // Image.asset(

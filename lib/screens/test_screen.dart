@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 
+import '../test/test2.dart';
+import '../test/test3.dart';
+import '../test/test4.dart';
+import '../test/test_screen.dart';
+
 class TestScreen extends StatelessWidget {
   const TestScreen({super.key});
 
@@ -62,12 +67,12 @@ class TestScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             GestureDetector(
-              // onTap: () => Navigator.push(
-              //   context,
-              //   MaterialPageRoute(
-              //     builder: (context) => BasicScreen(),
-              //   ),
-              // ),
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Test10(),
+                ),
+              ),
               child: Container(
                 width: SWidth * 42,
                 padding: const EdgeInsets.all(10),
@@ -105,12 +110,12 @@ class TestScreen extends StatelessWidget {
               ),
             ),
             GestureDetector(
-              // onTap: () => Navigator.push(
-              //   context,
-              //   MaterialPageRoute(
-              //     builder: (context) => ControlScreen(),
-              //   ),
-              // ),
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Test2(),
+                ),
+              ),
               child: Container(
                 width: SWidth * 42,
                 padding: const EdgeInsets.all(10),
@@ -156,12 +161,12 @@ class TestScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             GestureDetector(
-              // onTap: () => Navigator.push(
-              //   context,
-              //   MaterialPageRoute(
-              //     builder: (context) => FuncScreen(),
-              //   ),
-              // ),
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Test3(),
+                ),
+              ),
               child: Container(
                 width: SWidth * 42,
                 padding: const EdgeInsets.all(10),
@@ -199,12 +204,12 @@ class TestScreen extends StatelessWidget {
               ),
             ),
             GestureDetector(
-              // onTap: () => Navigator.push(
-              //   context,
-              //   MaterialPageRoute(
-              //     builder: (context) => ObjScreen(),
-              //   ),
-              // ),
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Test4(),
+                ),
+              ),
               child: Container(
                 width: SWidth * 42,
                 padding: const EdgeInsets.all(10),
@@ -246,100 +251,7 @@ class TestScreen extends StatelessWidget {
         SizedBox(
           height: SHeight * 2,
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            GestureDetector(
-              // onTap: () => Navigator.push(
-              //   context,
-              //   MaterialPageRoute(
-              //     builder: (context) => InterDetails(),
-              //   ),
-              // ),
-              child: Container(
-                width: SWidth * 42,
-                padding: const EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(20),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(.1),
-                      blurRadius: 4.0,
-                      spreadRadius: .05,
-                    ), //BoxShadow
-                  ],
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Align(
-                      alignment: Alignment.topRight,
-                      child: Image.asset(
-                        'assets/images/inter.jpg',
-                        height: SHeight * 17,
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    Text('Interview'),
-                    // Text(
-                    //   "${category.noOfCourses.toString()} courses",
-                    //   style: Theme.of(context).textTheme.bodySmall,
-                    // ),
-                  ],
-                ),
-              ),
-            ),
-            GestureDetector(
-              // onTap: () => Navigator.push(
-              //   context,
-              //   MaterialPageRoute(
-              //     builder: (context) => ExScreen(),
-              //   ),
-              // ),
-              child: Container(
-                width: SWidth * 42,
-                padding: const EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(20),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(.1),
-                      blurRadius: 4.0,
-                      spreadRadius: .05,
-                    ), //BoxShadow
-                  ],
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Align(
-                      alignment: Alignment.topRight,
-                      child: Image.asset(
-                        'assets/images/ex.jpg',
-                        height: SHeight * 17,
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    Text('Examples'),
-                    // Text(
-                    //   "${category.noOfCourses.toString()} courses",
-                    //   style: Theme.of(context).textTheme.bodySmall,
-                    // ),
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
-        SizedBox(
-          height: SHeight * 2,
-        ),
+        
       ],)
     );
   }
